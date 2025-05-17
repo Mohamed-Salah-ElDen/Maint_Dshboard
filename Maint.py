@@ -5,7 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 
-df = pd.read_excel(r"D:\Salah\Work\2025\Real_life\Maint_project.xlsx",sheet_name="Report")
+df = pd.read_excel(r"C:\Users\Opay\Desktop\1st\Maint_project.xlsx",sheet_name="Report")
 df['user_id'] = df['user_id'].astype(str)
 df['SR_id'] = df['SR_id'].astype(str)
 
