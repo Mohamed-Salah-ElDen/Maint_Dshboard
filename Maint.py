@@ -10,12 +10,26 @@ df = pd.read_excel("Maint_project.xlsx",sheet_name="Report")
 df['user_id'] = df['user_id'].astype(str)
 df['SR_id'] = df['SR_id'].astype(str)
 
-tab1 , tab2 = st.tabs(["Report" , "Analysis"])
+tab1 , tab2, tab3 = st.tabs(["Introduction" , "Report" , "Analysis"])
 
 with tab1 :
+    st.title("Maintenance Pos Over View")
+    st.header('Intro'.title(),divider=True)
+    st.write("This is dashboard to dive in the maintenance pos performance through all business lines")
+
+    st.subheader('Dashboard List')
+    st.write("first tab is Introduction : For the info regarding dashboard")
+    st.write("Second tab is the report which contain the data so you could download or view it")
+    st.write("Third tab is the analysis based on area manager")
+    st.write("Analysis will dive in distrbution of pos regarding gtv scale")
+    st.write("The performance of pos based on business lines")
+    st.write("Status of pos")
+    st.write("Tiers of achievment")
+    st.write("Compare betwen pos and merchant") 
+with tab2 :
     df
 
-with tab2:
+with tab3:
     custom_colors = {
     "Cairo & Giza": "#EF553B",
     "Delta West": "#FFA15A"}
